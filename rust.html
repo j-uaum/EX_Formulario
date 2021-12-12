@@ -1,46 +1,141 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Loco</title>
+    <title>Formulário</title>
+    <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
+  
     <div>
-        <h1>Cadastro de devs</h1>
-        <p>Complete com as informações</p>
-        <br>
+        <h1 id="titulo">Cadastro de devs</h1>
+        <p id="subtitulo">Complete com as informações</p>
+       
+
+
 
     </div>
-    <form>
-        <fieldset>
-                <div>
-                    <label>Nome</label>
-                    <input type="text" name="nome" id="nome">
+<br>
+<br>
+<section>   
+<form>
+        <fieldset class="grupo">
+                <div class="campo">
+                    <label for="nome">Nome:</label>
+                    <input type="text" name="nome" id="nome" required>
                 </div>
 
-                <div>
-                    <label>Sobrenome</label>
-                    <input type="text" name="sobrenome" id="sobrenome">
+                <div class="campo">
+                    <label for="sobrenome">Sobrenome:</label>
+                    <input type="text" name="sobrenome" id="sobrenome" required>
                 </div>
 
 
 
         </fieldset>
-        <div>
-            <label>Email</label>
-            <input type="email" name="email" id="email">
+        
+        
+        <div class="campo" >
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" required>
         </div>
-
-        <div>
-            <label>De qual lado da aplicação você desenvolve?</label>
-            <input type="radio" name="devweb" value="frontend">Front-end 
+<br>
+<br>
+<br>
+<br>                        
+        <div class="campo">
+            <label for="devweb"><strong></strong>De qual lado da aplicação você desenvolve?</strong></label><br>
+            <input type="radio" name="devweb" value="frontend" checked>Front-end 
             <input type="radio" name="devweb" value="backend">Back-end
+            <input type="radio" name="devweb" value="fullstack">Fullstack
         </div>
 
+        <div class="campo">
+            <label for="senioridade">Senioridade:</label>
+            <select id="senioridade">
+                <option selected disabled value="">Selecione</option>
+                <option>Junior</option>
+                <option>Pleno</option>
+                <option>Senior</option>                          
+            </select>
+        </div><br>
 
 
-    </form>
+<fieldset class="grupo">
+    
+    <div id="check">
+    
+<label for="checkbox"><strong>Selecione as tecnologias que você utiliza:</strong></label><br>
+
+<input type="checkbox" id="tecnologia1" name="tecnologia1" value="HTML">
+<label for="tecnologia1">HTML</label>
+
+<input type="checkbox" id="tecnologia2" name="tecnologia2" value="CSS">
+<label for="tecnologia2">CSS</label>
+
+<input type="checkbox" id="tecnologia3" name="tecnologia3" value="Javascript">
+<label for="tecnologia3">Javascript</label>
+
+<input type="checkbox" id="tecnologia4" name="tecnologia4" value="PHP">
+<label for="tecnologia4">PHP</label>
+
+<input type="checkbox" id="tecnologia5" name="tecnologia5" value="C#">
+<label for="tecnologia5">C#</label>
+
+<input type="checkbox" id="tecnologia6" name="tecnologia6" value="Python">
+<label for="tecnologia6">Python</label>
+
+<input type="checkbox" id="tecnologia7" name="tecnologia7" value="Java">
+<label for="tecnologia7">Java</label>
+
+</div>
+
+</fieldset>
+<br>
+<br>
+
+    <fieldset>
+
+    <div class="campo">
+        <br>
+    <label for="experiencia"><strong>Conte-nos um pouco sobre sua experiência:</strong></label>
+    
+    <textarea row="6" style="width: 26em" id="experiencia" name="experiencia"></textarea>
+
+    </textarea>
+
+</div>
+</fieldset>
+<br>
+
+<button type="submit" class="btn btn-green" >Enviar</botton> <br />
+
+
+
+
+</form>
+</section> 
+<br>
+<br>
+<br>
+<footer>
+    <p>&copy; Marksman</p>
+</footer>
+<br>
+<br>
+
+<script>
+    /* mudanças feitas no codigo apos o erro:
+    -correção do id="subtitulo" configuração no css
+    -add do section para melhor organização do codigo
+    -div individual para o campo de checkbox's e configuração
+    -add do footer
+    -otimização da formatação do form
+    -alteração de cores
+    */
+</script>
+
 </body>
 </html>
